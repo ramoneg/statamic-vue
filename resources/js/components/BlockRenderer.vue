@@ -16,7 +16,8 @@ export default {
       }
     },
     components: {
-        hero: defineAsyncComponent(() => import('@app/components/blocks/hero.vue')),
+        hero: defineAsyncComponent(() => import('@app/components/blocks/Hero.vue')),
+        'text-section': defineAsyncComponent(() => import('@app/components/blocks/TextSection.vue')),
     },
 
     methods: {
