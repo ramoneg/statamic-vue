@@ -14575,7 +14575,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   components: {
     hero: (0,vue__WEBPACK_IMPORTED_MODULE_0__.defineAsyncComponent)(function () {
-      return __webpack_require__.e(/*! import() */ "resources_js_components_blocks_hero_vue").then(__webpack_require__.bind(__webpack_require__, /*! @app/components/blocks/hero.vue */ "./resources/js/components/blocks/hero.vue"));
+      return __webpack_require__.e(/*! import() */ "resources_js_components_blocks_Hero_vue").then(__webpack_require__.bind(__webpack_require__, /*! @app/components/blocks/Hero.vue */ "./resources/js/components/blocks/Hero.vue"));
+    }),
+    'text-section': (0,vue__WEBPACK_IMPORTED_MODULE_0__.defineAsyncComponent)(function () {
+      return __webpack_require__.e(/*! import() */ "resources_js_components_blocks_TextSection_vue").then(__webpack_require__.bind(__webpack_require__, /*! @app/components/blocks/TextSection.vue */ "./resources/js/components/blocks/TextSection.vue"));
     })
   },
   methods: {
@@ -15192,7 +15195,7 @@ function compileToFunction(template, options) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if (chunkId === "resources_js_components_blocks_hero_vue") return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_blocks_Hero_vue":1,"resources_js_components_blocks_TextSection_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

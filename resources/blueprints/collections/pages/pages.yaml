@@ -20,11 +20,11 @@ sections:
         field:
           collapse: true
           sets:
-            text_section:
+            text-section:
               display: 'Text Section'
               fields:
                 -
-                  import: text_section
+                  import: text-section
             hero:
               display: Hero
               fields:
