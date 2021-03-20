@@ -62,7 +62,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("a", {
       key: index,
       href: button.url,
-      "class": "hover:shadow-lg transition-shadow px-4 py-2 rounded shadow bg-red-400"
+      "class": "hover:shadow-lg transition-shadow px-4 py-2 rounded shadow bg-white"
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(button.label), 9
     /* TEXT, PROPS */
     , ["href"]);
