@@ -1,0 +1,75 @@
+title: Hero
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: description
+    field:
+      antlers: false
+      display: Description
+      type: textarea
+      icon: textarea
+      listable: hidden
+  -
+    handle: buttons
+    field:
+      collapse: false
+      sets:
+        buttons:
+          display: Buttons
+          fields:
+            -
+              handle: url
+              field:
+                display: Url
+                type: link
+                icon: link
+                listable: hidden
+            -
+              handle: label
+              field:
+                input_type: text
+                antlers: false
+                display: Label
+                type: text
+                icon: text
+                listable: hidden
+            -
+              handle: color
+              field:
+                options:
+                  primary: Primary
+                  secondary: Secondary
+                  theritary: Theritary
+                multiple: false
+                clearable: false
+                searchable: true
+                taggable: false
+                push_tags: false
+                cast_booleans: false
+                display: Color
+                type: select
+                icon: select
+                listable: hidden
+      display: Buttons
+      type: replicator
+      icon: replicator
+      listable: hidden
+  -
+    handle: background
+    field:
+      mode: grid
+      container: assets
+      restrict: false
+      allow_uploads: true
+      display: Background
+      type: assets
+      icon: assets
+      listable: hidden

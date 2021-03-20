@@ -1,0 +1,12 @@
+title: Image
+fields:
+  -
+    handle: image
+    field:
+      mode: grid
+      restrict: false
+      allow_uploads: true
+      display: Image
+      type: assets
+      icon: assets
+      listable: hidden
