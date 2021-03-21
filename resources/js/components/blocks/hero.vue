@@ -7,9 +7,9 @@
             </div>
                 
             <div v-if="block.buttons" class="mt-4">
-                <a v-for="(button, index) in block.buttons" :key="index" :href="button.url" class="hover:shadow-lg transition-shadow px-4 py-2 rounded shadow bg-white">
+                <router-link v-for="(button, index) in block.buttons" :key="index" :to="button.url" class="hover:shadow-lg transition-shadow px-4 py-2 rounded shadow bg-white">
                     {{ button.label }}
-                </a>
+                </router-link>
             </div>
         </div>
     </div>
