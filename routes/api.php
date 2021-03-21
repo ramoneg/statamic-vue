@@ -1,13 +1,9 @@
 <?php
 
-use Statamic\Statamic;
-use Statamic\Support\Str;
-use Statamic\Facades\Data;
-use Statamic\Facades\Site;
-use Illuminate\Http\Request;
+use App\Http\Controllers\ApiController;
+
 use Illuminate\Support\Facades\Route;
-use Statamic\Exceptions\NotFoundHttpException;
-use Statamic\Http\Controllers\API\CollectionEntriesController;
+
 
 
 /*
@@ -26,24 +22,5 @@ use Statamic\Http\Controllers\API\CollectionEntriesController;
 // });
 
 
-Route::get('/routes/{route}', function (Request $request, $route) {
-
-    $url = Site::current()->relativePath(
-        str_finish(str_ireplace('/api/routes', '', $request->getUri()), '/')
-    );
-
-    if ($url === '' || $route == 'home') {
-        $url = '/';
-    }
-
-    if (Str::contains($url, '?')) {
-        $url = substr($url, 0, strpos($url, '?'));
-    }
-
-    if ($data = Data::findByUri($url, Site::current()->handle())) {
-        $collection = $data->structure()->collection()->handle();
-        return (new CollectionEntriesController($request))->show($collection, $data);
-    }
-
-    throw new NotFoundHttpException;
-})->where('route', '.*');
+Route::get('/routes', [ApiController::class, 'show']);
+Route::get('/routes/{route}', [ApiController::class, 'show'])->where('route', '.*');
