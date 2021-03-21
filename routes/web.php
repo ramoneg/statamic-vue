@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 // Route::statamic('example', 'example-view', [
 //    'title' => 'Example'
 // ]);
+
+// Route::get('{any}', function (Request $request) {
+//     return view('render')->with([
+//         'url' => $request->path(),
+//     ]);
+// })->where('any', '.*');
