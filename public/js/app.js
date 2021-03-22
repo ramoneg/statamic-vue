@@ -16427,6 +16427,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return _this.fetchBlocks(to.path);
 
               case 2:
+                _this.page = _context.sent;
+
+              case 3:
               case "end":
                 return _context.stop();
             }
@@ -16437,8 +16440,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   methods: {
     fetchBlocks: function fetchBlocks(url) {
-      var _this2 = this;
-
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
           while (1) {
@@ -16450,10 +16451,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                 _context2.next = 3;
                 return axios__WEBPACK_IMPORTED_MODULE_3___default().get("/api/routes/".concat(url)).then(function (res) {
-                  _this2.page = res.data.data;
+                  return res.data.data;
                 });
 
               case 3:
+                return _context2.abrupt("return", _context2.sent);
+
+              case 4:
               case "end":
                 return _context2.stop();
             }
@@ -16463,7 +16467,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   created: function created() {
-    var _this3 = this;
+    var _this2 = this;
 
     return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
@@ -16471,9 +16475,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           switch (_context3.prev = _context3.next) {
             case 0:
               _context3.next = 2;
-              return _this3.fetchBlocks(_this3.data.url);
+              return _this2.fetchBlocks(_this2.data.url);
 
             case 2:
+              _this2.page = _context3.sent;
+
+            case 3:
             case "end":
               return _context3.stop();
           }

@@ -24,7 +24,7 @@ export default {
 
     watch: {
         async $route(to, from) {
-            await this.fetchBlocks(to.path)
+            this.page = await this.fetchBlocks(to.path)
         },
     },
 
@@ -33,14 +33,14 @@ export default {
             if (url.charAt(0) == '/') {
                 url = url.replace('/', '', 1)
             }
-            await axios.get(`/api/routes/${url}`).then((res) => {
-                this.page = res.data.data
+            return await axios.get(`/api/routes/${url}`).then((res) => {
+                return res.data.data
             })
         },
     },
 
     async created() {
-        await this.fetchBlocks(this.data.url)
+        this.page = await this.fetchBlocks(this.data.url)
     },
 }
 </script>
